@@ -1,0 +1,227 @@
+<```html
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Ramadan Guide</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+color:white;
+background: linear-gradient(#021d16,#063d2f);
+}
+
+/* Header */
+
+header{
+background:#145a32;
+padding:25px;
+text-align:center;
+}
+
+h1{
+color:gold;
+}
+
+h2{
+color:#f9e79f;
+}
+
+/* Navigation */
+
+nav{
+background:#0e4d34;
+padding:12px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:gold;
+}
+
+/* Sections */
+
+.container{
+padding:20px;
+}
+
+section{
+background:#1e8449;
+margin:20px;
+padding:20px;
+border-radius:10px;
+}
+
+/* Images */
+
+img{
+width:100%;
+max-width:600px;
+display:block;
+margin:auto;
+border-radius:10px;
+}
+
+/* Moon animation */
+
+.moon{
+font-size:60px;
+text-align:center;
+animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+/* Stars */
+
+.stars{
+text-align:center;
+font-size:20px;
+letter-spacing:5px;
+}
+
+/* Countdown */
+
+#countdown{
+font-size:20px;
+font-weight:bold;
+}
+
+/* Footer */
+
+footer{
+background:#145a32;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🌙 Ramadan: The Blessed Month</h1>
+<p>Learning the importance of Ramadan</p>
+<div class="moon">🌙</div>
+<div class="stars">✨ ✨ ✨ ✨ ✨ ✨</div>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#topics">Topics</a>
+<a href="#dua">Duas</a>
+</nav>
+
+<div class="container">
+
+<section>
+<h2>Ramadan Countdown</h2>
+<p id="countdown"></p>
+</section>
+
+<section>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Blue_Mosque_Istanbul.jpg">
+</section>
+
+<section id="topics">
+<h2>1. What is Ramadan?</h2>
+<p>Ramadan is the ninth month of the Islamic calendar. Muslims fast from dawn until sunset. It is a month of worship, patience, and self-discipline.</p>
+</section>
+
+<section>
+<h2>2. Why Ramadan is Important</h2>
+<p>Ramadan is important because the Qur'an was first revealed during this month. Muslims use this time to increase their worship and become closer to Allah.</p>
+</section>
+
+<section>
+<h2>3. Purpose of Fasting</h2>
+<p>Fasting teaches patience, self-control, and gratitude. It also reminds people to help those who are less fortunate.</p>
+</section>
+
+<section>
+<h2>4. The Last 10 Nights</h2>
+<p>The last ten nights of Ramadan are the most powerful nights for prayer and seeking forgiveness.</p>
+</section>
+
+<section>
+<h2>Laylatul Qadr</h2>
+<p>Laylatul Qadr (Night of Power) is better than a thousand months. Muslims pray deeply and make many duas during these nights.</p>
+</section>
+
+<section>
+<h2>Qur'an Reminder</h2>
+<p>"The Night of Decree is better than a thousand months." — Qur'an 97:3</p>
+</section>
+
+<section id="dua">
+<h2>Duas for Ramadan and the Last 10 Nights</h2>
+
+<p><b>1.</b> Allahumma innaka afuwwun tuhibbul afwa fa'fu anni</p>
+<p><i>O Allah, You are Most Forgiving and love forgiveness, so forgive me.</i></p>
+
+<p><b>2.</b> Rabbana atina fid dunya hasanah wa fil akhirati hasanah wa qina adhaban nar</p>
+<p><i>Our Lord, give us good in this world and good in the Hereafter and protect us from the punishment of the Fire.</i></p>
+
+<p><b>3.</b> Allahumma inni as'aluka al-jannah</p>
+<p><i>O Allah, I ask You for Paradise.</i></p>
+
+<p><b>4.</b> Rabbi zidni ilma</p>
+<p><i>My Lord, increase me in knowledge.</i></p>
+
+<p><b>5.</b> Allahumma inni as'aluka al-afiyah</p>
+<p><i>O Allah, I ask You for health and protection.</i></p>
+
+</section>
+
+<section>
+<h2>Eid al-Fitr</h2>
+<p>After Ramadan ends, Muslims celebrate Eid al-Fitr with prayer, charity, and family gatherings.</p>
+</section>
+
+</div>
+
+<footer>
+<p>Ramadan Learning Website</p>
+</footer>
+
+<script>
+
+var ramadan = new Date("March 20, 2026 00:00:00").getTime();
+
+var timer = setInterval(function(){
+
+var now = new Date().getTime();
+
+var distance = ramadan - now;
+
+var days = Math.floor(distance/(1000*60*60*24));
+var hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+var minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("countdown").innerHTML =
+days + " days " + hours + " hours " + minutes + " minutes";
+
+},1000);
+
+</script>
+
+</body>
+
+</html>
